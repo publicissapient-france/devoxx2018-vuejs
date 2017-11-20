@@ -16,7 +16,7 @@
 </template>
 
 <script>
-  // TODO écrire le code du composant
+  // TODO définir le composant
 </script>
 
 <style scoped lang="scss">
