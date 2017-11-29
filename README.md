@@ -1,6 +1,6 @@
 # Hands-On Vue.js
 
-> [Accès à la présentation](https://raw.githubusercontent.com/xebia-france/xebicon17-vuejs/master/presentation.pdf)
+> [Accès à la présentation](https://raw.githubusercontent.com/xebia-france/xebicon17-vuejs/master/presentation-vuejs.pdf)
 
 - Ludovic Ladeu
 - Thomas Champion [@ReeskaFr](https://twitter.com/ReeskaFr)
