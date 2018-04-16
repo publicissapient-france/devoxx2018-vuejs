@@ -6,14 +6,20 @@
       <div class="menu">
         <ul>
           <li>
-            <!-- TODO insérer le lien vers la liste des recettes -->
+            <router-link to="/recipes">Liste des recettes</router-link>
+          </li>
+          <li>
+            <!-- TODO pour la step 4: insérer le lien vers le formulaire d'ajout de recette -->
           </li>
         </ul>
       </div>
     </header>
 
-    <!-- TODO pour l'étape 3 remplacer le composant recipes pour utiliser le router -->
-    <recipes></recipes>
+    <main>
+      <div class="content">
+        <router-view></router-view>
+      </div>
+    </main>
   </div>
 </template>
 

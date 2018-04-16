@@ -1,8 +1,7 @@
 <template>
   <div class="recipe">
     <h3>
-      <!-- TODO insérer le lien vers le détail de la recette -->
-      {{ data.nom }}
+      <router-link :to="{ name: 'recipe', params: { uid : data.uid }}">{{ data.nom }}</router-link>
     </h3>
     <div class="details">
       <div class="info">

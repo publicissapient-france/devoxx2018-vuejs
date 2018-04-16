@@ -1,11 +1,24 @@
-// eslint-disable-next-line no-unused-vars
 import Vue from 'vue'
+import Router from 'vue-router'
+import Recipes from '../components/Recipes.vue'
+import RecipeDetail from '../components/RecipeDetail.vue'
 
-// eslint-disable-next-line no-unused-vars
-import VueRouter from 'vue-router'
+Vue.use(Router)
 
-// TODO importer les composants utiles pour les routes
-
-// TODO activer le plugin VueRouter
-
-// TODO définir et exporter le router
+export default new Router({
+  routes: [
+    {
+      path: '/recipes',
+      name: 'recipes',
+      component: Recipes,
+      alias: '/'
+    },
+    {
+      path: '/recipes/:uid',
+      name: 'recipe',
+      component: RecipeDetail,
+      props: true
+    }
+    // TODO de la step 4 : ajouter la route vers le formulaire d'ajout de recette
+  ]
+})

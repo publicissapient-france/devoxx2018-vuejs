@@ -9,7 +9,7 @@
 
 ### Prérequis
 
-Attention, pour fonctionner Vue.js requière au moins **node v5**.
+Attention, pour fonctionner Vue.js requière au moins **node v6**.
 
 ``` bash
 # install dependencies
@@ -27,70 +27,43 @@ L'objectif de ce Hand's On est de mettre en pratique vos connaissances sur Vue.j
 
 Cet exercice est découpé en 5 étapes afin d'introduire au fur et à mesure les concepts de Vue.js, et ainsi de construire l'application qui détrônera Marmiton.
 
-## Etape 3
+## Etape 4
 
-Cette étape consiste à afficher une vue détaillée de la recette en incluant notamment la liste des ingrédients.
+Cette étape consiste à développer la fonctionnalité qui permettra aux utilisateurs d'ajouter leur propres recettes.
 
-Pour ce faire nous allons devoir créer un nouveau composant et mettre en place le routage.
+Pour ce faire il va falloir créer un nouveau composant `AddRecipe` qui sera accessible via le chemin `/add-recipes`.
 
-### 0. Prérequis
+### 1. Création du composant `AddRecipe`
 
-Installer Vue Router avec la commande suivante :
+Créer un fichier AddRecipe.vue dans le répertoire components
 
-```bash
-npm install vue-router --save
-```
+Pour la partie **script** :
 
-### 1. Création du composant de détail
+* Importer le service recipes-service
+* Pour ajouter une nouvelle recette vous devez utiliser la méthode `addRecipe`
 
-Créer un fichier `RecipeDetail.vue` dans le répertoire *components*
+Pour la partie **template** :
 
-Pour la partie script :
-* Importer le service `recipes-service`
-* Importer le composant `Recipe`
-* Ce composant doit prendre en entrée l'uid de la recette
-* Récupérer la recette grâce à l'uid 
+* Créer un formulaire qui contient les champs suivants :
+  * type : ce champ peut être une liste comprenant les valeurs possibles :
+    * Plat
+    * Dessert
+    * Entrée
+    * Boisson
+  * nom
+  * histoire
+  * img_small
+  * une liste d'ingredients
+  * ainsi qu'un bouton **Sauvegarder**
 
-Pour la partie template :
-* Afficher la recette en utilisant le composant `Recipe`
-* Afficher la liste des ingrédients en utilisant `v-for`
+### 2. Routage
 
-Vous pouvez vous servir du style suivant pour s'approcher du résultat attendu :
-
-```html
-<style scoped lang="scss">
-  .details {
-    position: relative;
-
-    .img-big {
-      text-align: center;
-      position: absolute;
-      z-index: 1;
-      opacity: 0.3;
-    }
-
-    .ingredients {
-      padding: 10px;
-
-      h4 {
-        margin-top: 0;
-      }
-    }
-  }
-</style>
-```
-
-### 2. Mise en place du routage
-
-* Compléter les TODOs du fichier `src/router/index.js`
-  * La route vers la liste des recettes doit répondre sur `/` et sur `/recipes` (voir [la documentation de Vue router](https://router.vuejs.org/en/essentials/redirect-and-alias.html))
-* Brancher le router sur l'instance de Vue déclarée dans le fichier `src/main.js`
-* Compléter les TODOs du fichier `src/App.vue` (définition du routage dans le template)
+Maintenant que votre composant est disponible ajouter une entrée dans la liste routes dans le fichier `src/router/index.js`.
 
 #### Résultat attendu
 
-![](assets/recipe-detail.png)
+![](assets/addrecipe.png)
 
 A vous de jouer !
 
-Si vous avez terminé, ou pour les plus impatients, vous trouverez la suite et solution sur la [branche step-4](https://github.com/xebia-france/devoxx2018-vuejs/tree/step-4).
+Si vous avez terminé, ou pour les plus impatients, vous trouverez la suite et solution sur la [branche step-5](https://github.com/xebia-france/devoxx2018-vuejs/tree/step-5).
