@@ -1,6 +1,7 @@
 <template>
   <div class="recipe">
     <h3>
+      <!-- TODO insérer le lien vers le détail de la recette -->
       {{ data.nom }}
     </h3>
     <div class="details">

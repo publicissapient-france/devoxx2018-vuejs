@@ -2,23 +2,26 @@
   <div id="app">
     <header>
       <h1>SuperCook</h1>
+
+      <div class="menu">
+        <ul>
+          <li>
+            <!-- TODO insérer le lien vers la liste des recettes -->
+          </li>
+        </ul>
+      </div>
     </header>
 
-    <recipe :data="recipe"></recipe>
+    <!-- TODO pour l'étape 3 remplacer le composant recipes pour utiliser le router -->
+    <recipes></recipes>
   </div>
 </template>
 
 <script>
-  import recipesService from './services/recipes-services'
-  import Recipe from './components/Recipe.vue'
+  import Recipes from './components/Recipes.vue'
 
   export default {
-    data() {
-      return {
-        recipe: recipesService.getRecipe()
-      }
-    },
-    components: {Recipe}
+    components: {Recipes}
   }
 </script>
 
