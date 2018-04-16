@@ -107,4 +107,4 @@ Dans le composant App :
 
 A vous de jouer !
 
-Si vous avez terminé, ou pour les plus impatients, vous trouverez la suite et solution sur la [branche step-2](https://github.com/xebia-france/xebicon17-vuejs/tree/step-2).
+Si vous avez terminé, ou pour les plus impatients, vous trouverez la suite et solution sur la [branche step-2](https://github.com/xebia-france/devoxx2018-vuejs/tree/step-2).
