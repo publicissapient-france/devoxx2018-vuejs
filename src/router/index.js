@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Recipes from '../components/Recipes.vue'
 import RecipeDetail from '../components/RecipeDetail.vue'
 import AddRecipe from '../components/AddRecipe.vue'
+import Favorites from '../components/Favorites.vue'
 
 Vue.use(Router)
 
@@ -24,7 +25,11 @@ export default new Router({
       path: '/add-recipe',
       name: 'add-recipe',
       component: AddRecipe
+    },
+    {
+      path: '/favorites',
+      name: 'favorites',
+      component: Favorites
     }
-    // TODO de la step 5 : ajouter la route vers la liste des favoris
   ]
 })

@@ -7,7 +7,7 @@
       <h4>Ingrédients</h4>
 
       <ul>
-        <li v-for="ingredient in recipe.ingredients">{{ ingredient.label }}</li>
+        <li v-for="ingredient in recipe.ingredients" :key="ingredient.label">{{ ingredient.label }}</li>
       </ul>
     </div>
   </div>

@@ -9,7 +9,7 @@
         <label>Type</label>
         <select v-model="recipe.type">
           <option selected="selected" value="">-</option>
-          <option v-for="type in types" :value="type">{{ type }}</option>
+          <option v-for="type in types" :value="type" :key="type">{{ type }}</option>
         </select>
       </fieldset>
 
@@ -32,8 +32,8 @@
       <div>
         <h3>Liste des ingrédients</h3>
         <ul>
-          <li v-for="ingredient in recipe.ingredients">
-            Nom de l'ingrédient : <input v-model="ingredient.label" />
+          <li v-for="ingredient in recipe.ingredients" :key="ingredient.label">
+            <input v-model="ingredient.label" />
           </li>
           <li>
             <button type="button" @click="addIngredient()">Ajouter un ingrédient</button>

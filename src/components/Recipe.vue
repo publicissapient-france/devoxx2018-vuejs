@@ -10,20 +10,31 @@
       </div>
       <div class="story">
         <p class="description">{{ data.histoire }}</p>
-        <!-- TODO étape 5 : utiliser le composant 'Star' qui permet d'ajouter la recette en favoris -->
+        <star class="favorite" @onChange="onFavorite" :favorite="data.favorite"></star>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-  // TODO étape 5 : importer composant Star
-  // TODO étape 5 : importer le recipes service
+  import Star from './Star.vue'
+  import recipesService from '../services/recipes-services'
 
   export default {
+    methods: {
+      onFavorite (favorite) {
+        this.data.favorite = favorite
+        if (favorite) {
+          recipesService.addFavorite(this.data)
+        } else {
+          recipesService.removeFavorite(this.data)
+        }
+        this.$emit('onFavorite')
+      }
+    },
+    components: {Star},
+    name: 'recipe',
     props: ['data']
-    // TODO étape 5 : gérer le changement d'état du composant Star via l'événement onChange
-    // en ajoutant ou retirant le favori
   }
 </script>
 

@@ -12,7 +12,7 @@
             <router-link to="/add-recipe">Ajout d'une recette</router-link>
           </li>
           <li>
-            <!-- TODO pour la step 5: insérer le lien vers la liste des favoris -->
+            <router-link to="/favorites">Mes Favoris</router-link>
           </li>
         </ul>
       </div>
