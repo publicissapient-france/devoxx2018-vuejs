@@ -27,43 +27,51 @@ L'objectif de ce Hand's On est de mettre en pratique vos connaissances sur Vue.j
 
 Cet exercice est découpé en 5 étapes afin d'introduire au fur et à mesure les concepts de Vue.js, et ainsi de construire l'application qui détrônera Marmiton.
 
-## Etape 4
+## Etape 5
 
-Cette étape consiste à développer la fonctionnalité qui permettra aux utilisateurs d'ajouter leur propres recettes.
+Wahoo ! Quel exploit d'être arrivé jusqu'ici ! Aller plus qu'une étape :stuck_out_tongue_winking_eye:.
 
-Pour ce faire il va falloir créer un nouveau composant `AddRecipe` qui sera accessible via le chemin `/add-recipes`.
+Cette étape consiste à créer sa liste de recettes favorites. 
+Pour ce faire nous vous mettons à disposition un composant `Star` que vous pourrez utiliser en tant que bouton "Ajouter à mes favoris". 
 
-### 1. Création du composant `AddRecipe`
+### Instructions
 
-Créer un fichier AddRecipe.vue dans le répertoire components
+#### 1. Enrichir le composant Recipe
 
-Pour la partie **script** :
+Le but ici est d'ajouter un bouton dans ce composant permettant d'ajouter la recette en favoris.
+Le service recipes-service vous met à disposition les méthodes suivantes :
+* `addFavorite(recipe)` : ajout d'une recette au favoris
+* `removeFavorite(recipe)` : supprime la recette des favoris
 
-* Importer le service recipes-service
-* Pour ajouter une nouvelle recette vous devez utiliser la méthode `addRecipe`
+Pour compléter cette partie suivez simplement les TODOs. 
 
-Pour la partie **template** :
+#### 2. Création du composant Favorites
 
-* Créer un formulaire qui contient les champs suivants :
-  * type : ce champ peut être une liste comprenant les valeurs possibles :
-    * Plat
-    * Dessert
-    * Entrée
-    * Boisson
-  * nom
-  * histoire
-  * img_small
-  * une liste d'ingredients
-  * ainsi qu'un bouton **Sauvegarder**
+Créer le composant `Favorites` qui correspondra à l'écran affichant la liste des favoris. 
+Cet écran sera très similaire à l'écran listant les recettes.
 
-### 2. Routage
+Dans la partie **script** :
 
-Maintenant que votre composant est disponible ajouter une entrée dans la liste routes dans le fichier `src/router/index.js`.
+* Importer le service `recipes-service`
+* Importer le composant `Recipe`
+* Utiliser la méthode `findFavorites` pour récupérer la liste des favoris
+
+Dans la partie **template** :
+
+* Afficher la liste des recettes en utilisant le composant `Recipe`
+
+#### 3. Routage
+
+Maintenant que votre composant est disponible ajouter une entrée dans la liste routes dans le fichier src/router/index.js.
+
+#### 4. La cerise :cherries:
+
+La cerise sur le gâteau serait de faire en sorte que la liste des favoris se rafraîchisse si on retire une recette des favoris.
 
 #### Résultat attendu
 
-![](assets/addrecipe.png)
+![](assets/favorites.png)
 
 A vous de jouer !
 
-Si vous avez terminé, ou pour les plus impatients, vous trouverez la suite et solution sur la [branche step-5](https://github.com/xebia-france/devoxx2018-vuejs/tree/step-5).
+Si vous avez terminé, ou pour les plus impatients, vous trouverez la suite et solution sur la [branche step-6](https://github.com/xebia-france/devoxx2018-vuejs/tree/step-6).

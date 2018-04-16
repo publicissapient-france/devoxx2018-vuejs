@@ -9,7 +9,10 @@
             <router-link to="/recipes">Liste des recettes</router-link>
           </li>
           <li>
-            <!-- TODO pour la step 4: insérer le lien vers le formulaire d'ajout de recette -->
+            <router-link to="/add-recipe">Ajout d'une recette</router-link>
+          </li>
+          <li>
+            <!-- TODO pour la step 5: insérer le lien vers la liste des favoris -->
           </li>
         </ul>
       </div>
