@@ -4,15 +4,22 @@
       <h1>SuperCook</h1>
     </header>
 
-    <!-- TODO afficher la recette -->
+    <recipe :data="recipe"></recipe>
   </div>
 </template>
 
 <script>
-  // TODO importer le service
-  // TODO import le composant Recipe
+  import recipesService from './services/recipes-services'
+  import Recipe from './components/Recipe.vue'
 
-  // TODO définir le composant
+  export default {
+    data() {
+      return {
+        recipe: recipesService.getRecipe()
+      }
+    },
+    components: {Recipe}
+  }
 </script>
 
 <style lang="scss">

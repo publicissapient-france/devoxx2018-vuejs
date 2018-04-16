@@ -1,22 +1,24 @@
 <template>
   <div class="recipe">
     <h3>
-      <!-- TODO insérer le nom -->
+      {{ data.nom }}
     </h3>
     <div class="details">
       <div class="info">
-        <!--- TODO insérer l'image --->
-        <div><!-- TODO insérer le temps de cuisson --></div>
+        <img :src="data.img_small"/>
+        <div>Durée : {{ data.cuisson }} minutes</div>
       </div>
       <div class="story">
-        <p class="description"><!-- TODO insérer l'histoire --></p>
+        <p class="description">{{ data.histoire }}</p>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-  // TODO définir le composant
+  export default {
+    props: ['data']
+  }
 </script>
 
 <style scoped lang="scss">
