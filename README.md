@@ -9,14 +9,14 @@
 
 ### Prérequis
 
-Attention, pour fonctionner Vue.js requière au moins **node v5**.
+Attention, pour fonctionner Vue.js requiert au moins **node v6**.
 
 ``` bash
 # install dependencies
 npm install
 
 # serve with hot reload at localhost:8080
-npm run dev
+npm run serve
 ```
 
 Plus d'informations sur la très complète [documentation officielle](https://vuejs.org/v2/guide/).
