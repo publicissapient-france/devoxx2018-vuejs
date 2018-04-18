@@ -9,7 +9,7 @@
 
 ### Prérequis
 
-Attention, pour fonctionner Vue.js requière au moins **node v6**.
+Attention, pour fonctionner Vue.js requiert au moins **node v6**.
 
 ``` bash
 # install dependencies
